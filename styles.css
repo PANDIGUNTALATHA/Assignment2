@@ -1,0 +1,55 @@
+/* styles.css */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.product-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.price-container {
+    display: flex;
+    gap: 10px;
+}
+
+#mainImage {
+    width: 100%;
+    max-width: 500px;
+}
+
+#thumbnails img {
+    width: 100px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.quantity-selector button {
+    padding: 5px 10px;
+}
+
+.quantity-selector input {
+    width: 50px;
+    text-align: center;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+    .product-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .product-info {
+        max-width: 300px;
+        align-items: start;
+    }
+}
