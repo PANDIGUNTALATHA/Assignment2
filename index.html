@@ -1,36 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Detail Page</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="product-container">
-        <img id="mainImage" src="" alt="Main Product Image">
-        <div id="thumbnails"></div>
-        <div class="product-info">
-            <h1 id="productTitle"></h1>
-            <p id="productVendor"></p>
-            <div class="price-container">
-                <span id="price"></span>
-                <span id="compareAtPrice"></span>
-                <span id="discount"></span>
-            </div>
-            <div id="colorSelector"></div>
-            <select id="sizeSelector"></select>
-            <div class="quantity-selector">
-                <button onclick="changeQuantity(-1)">-</button>
-                <input id="quantity" type="number" value="1">
-                <button onclick="changeQuantity(1)">+</button>
-            </div>
-            <button id="addToCart">Add to Cart</button>
-            <p id="addToCartMessage"></p>
-            <p id="description"></p>
-        </div>
+  <div class="product-details">
+    <div class="product-image">
+      <img src="product_image.jpg" alt="Product Image">
     </div>
-    <script src="script.js"></script>
+    <div class="thumbnail-images">
+      <img src="jeanstop.jpg" alt="Thumbnail Image 1">
+      <img src="jeanstop.jpg" alt="Thumbnail Image 2">
+      <!-- Add more thumbnail images as needed -->
+    </div>
+    <div class="details">
+      <h1 class="vendor">Marmeto</h1>
+      <h2 class="title">Embrace Sideboard</h2>
+      <p class="price">$Price</p>
+      <p class="compare-price">Compare at price: $199</p>
+      <p class="discount">Discount: <span id="discountPercentage">0%</span></p>
+      <select id="colorSelector" class="color-selector">
+        <option value="black">Black</option>
+        <option value="white">White</option>
+        <!-- Add more color options as needed --><br>
+      </select>
+      <select id="sizeSelector" class="size-selector">
+        <option value="small">Small</option>
+        <option value="medium">Medium</option>
+        <option value="large">Large</option>
+        <!-- Add more size options as needed -->
+      </select>
+      <br>
+      <input type="number" id="quantitySelector" class="quantity-selector" value="1" min="1">
+      <button id="addToCartBtn" class="add-to-cart-btn">Add to Cart</button>
+      <p id="addToCartMessage" class="add-to-cart-message"></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
